@@ -1,0 +1,26 @@
+[2026-06-10T10:44:54.760+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-10T10:44:54.796+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_clickhouse_pipeline.dbt_run_silver scheduled__2026-06-09T00:00:00+00:00 [queued]>
+[2026-06-10T10:44:54.809+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_clickhouse_pipeline.dbt_run_silver scheduled__2026-06-09T00:00:00+00:00 [queued]>
+[2026-06-10T10:44:54.810+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-06-10T10:44:54.825+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): dbt_run_silver> on 2026-06-09 00:00:00+00:00
+[2026-06-10T10:44:54.832+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dbt_clickhouse_pipeline', 'dbt_run_silver', 'scheduled__2026-06-09T00:00:00+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/dbt_dag.py', '--cfg-path', '/tmp/tmpe7409c1i']
+[2026-06-10T10:44:54.834+0000] {standard_task_runner.py:91} INFO - Job 27: Subtask dbt_run_silver
+[2026-06-10T10:44:54.835+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=199) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-10T10:44:54.835+0000] {standard_task_runner.py:63} INFO - Started process 200 to run task
+[2026-06-10T10:44:54.890+0000] {task_command.py:426} INFO - Running <TaskInstance: dbt_clickhouse_pipeline.dbt_run_silver scheduled__2026-06-09T00:00:00+00:00 [running]> on host 98e9eef192e8
+[2026-06-10T10:44:54.992+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_clickhouse_pipeline' AIRFLOW_CTX_TASK_ID='dbt_run_silver' AIRFLOW_CTX_EXECUTION_DATE='2026-06-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-09T00:00:00+00:00'
+[2026-06-10T10:44:54.993+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-10T10:44:55.009+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-06-10T10:44:55.011+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt/my_dwh_project && dbt run --select silver']
+[2026-06-10T10:44:55.022+0000] {subprocess.py:86} INFO - Output:
+[2026-06-10T10:44:57.812+0000] {subprocess.py:93} INFO - [0m10:44:57  Running with dbt=1.11.11
+[2026-06-10T10:44:58.264+0000] {subprocess.py:93} INFO - [0m10:44:58  Registered adapter: clickhouse=1.10.0
+[2026-06-10T10:44:59.054+0000] {subprocess.py:93} INFO - [0m10:44:59  Found 6 models, 4 data tests, 3 sources, 523 macros
+[2026-06-10T10:44:59.058+0000] {subprocess.py:93} INFO - [0m10:44:59  The selection criterion 'silver' does not match any enabled nodes
+[2026-06-10T10:44:59.062+0000] {subprocess.py:93} INFO - [0m10:44:59  Nothing to do. Try checking your model configs and model specification args
+[2026-06-10T10:45:00.506+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-06-10T10:45:00.507+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-10T10:45:00.537+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dbt_clickhouse_pipeline, task_id=dbt_run_silver, run_id=scheduled__2026-06-09T00:00:00+00:00, execution_date=20260609T000000, start_date=20260610T104454, end_date=20260610T104500
+[2026-06-10T10:45:00.561+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-10T10:45:00.590+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-10T10:45:00.592+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
