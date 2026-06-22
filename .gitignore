@@ -1,0 +1,9 @@
+data/
+logs/
+target/
+__pycache__/
+*.pyc
+.env
+krisha_parser/wheels/
+my_dwh_project/target/
+my_dwh_project/dbt_packages/
