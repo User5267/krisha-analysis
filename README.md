@@ -39,7 +39,7 @@ krisha.kz → Parser → CSV → Airflow → ClickHouse → dbt → Metabase
 
 ### 1. Клонировать репозиторий
 ```bash
-git clone https://github.com/твой_username/krisha-analysis.git
+git clone https://github.com/User5267/krisha-analysis.git
 cd krisha-analysis
 ```
 
